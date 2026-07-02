@@ -1,273 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="$BRODIE on Ethereum. Robinhood's dog token with meme energy and liftoff vibes."
-    />
-    <meta name="theme-color" content="#030712" />
-    <title>$BRODIE | Robinhood's Dog</title>
-    <meta property="og:title" content="$BRODIE | Robinhood's Dog" />
-    <meta
-      property="og:description"
-      content="Robinhood's dog meme token on Ethereum."
-    />
-    <meta
-      property="og:image"
-      content="./assets/social/eagle_og_image_1200x630.webp"
-    />
-    <link rel="icon" href="./brodielogo.png" />
-    <link rel="icon" type="image/png" href="./brodielogo.png" />
-    <link rel="apple-touch-icon" href="./brodielogo.png" />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <header class="site-header" data-header>
-      <a class="brand" href="#top" aria-label="$BRODIE home">
-        <img src="./assets/logos/eagle_coin_logo_128.webp" alt="" />
-        <span>$BRODIE</span>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robinhood Dog ($BRODIE) — The Good Boy on Robinhood Chain</title>
+  <meta name="description" content="Robinhood's legendary office dog. Now on-chain as $BRODIE — a wholesome memecoin tribute on Robinhood Chain.">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-layer">
+    <canvas id="particleCanvas"></canvas>
+    <div class="smoke smoke-1"></div>
+    <div class="smoke smoke-2"></div>
+    <div class="smoke smoke-3"></div>
+    <div class="grid-overlay"></div>
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="glow-orb glow-orb-3"></div>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand">
+        <img src="assets/logo.png" alt="Brodie" class="nav-logo">
+        <span class="nav-title">$BRODIE</span>
       </a>
-      <nav class="top-nav" aria-label="Primary navigation">
-        <a href="#mission">About</a>
-        <a href="#chart">Chart</a>
-        <a href="#buy">Buy</a>
-        <a href="#raids">Raids</a>
-      </nav>
-      <a
-        class="nav-buy"
-        href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=0xa0342f769222004067dfae7e9f7e7fd68b765dd9"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Buy $BRODIE
-      </a>
-    </header>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#howtobuy">How to Buy</a></li>
+        <li><a href="#chart">Chart</a></li>
+        <li><a href="#joinus" class="nav-cta">Join Us</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-shell">
-          <picture class="hero-art">
-            <source
-              media="(max-width: 720px)"
-              srcset="./assets/banners/eagle_mobile_banner_1080x1080.webp"
-            />
-            <img
-              src="./assets/banners/eagle_hero_banner_1920x640.webp"
-              alt="$BRODIE hero banner"
-            />
-          </picture>
-
-          <div class="hero-panel">
-            <p class="eyebrow"><span></span> Ethereum meme launch</p>
-            <h1 id="hero-title">$BRODIE</h1>
-            <p class="tagline">Robinhood's dog is on-chain.</p>
-            <p class="hero-copy">
-              A polished degen landing page for Robinhood's office dog with
-              meme energy, green candles, and aggressive liftoff vibes.
-            </p>
-            <div class="hero-actions">
-              <a
-                class="btn primary"
-                href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=0xa0342f769222004067dfae7e9f7e7fd68b765dd9"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>$</span>
-                Buy on Uniswap
-              </a>
-              <a
-                class="btn ghost"
-                href="https://x.com/RobinDogBrodie"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>/</span>
-                Follow on X
-              </a>
-            </div>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-visual reveal-left">
+        <div class="hero-glow-ring"></div>
+        <div class="hero-glow-ring ring-2"></div>
+        <div class="tweet-main-wrap">
+          <span class="tweet-label">
+            <img src="icons/x.svg" alt="" class="tweet-label-icon">
+            The Original Tweet · Aug 4, 2016
+          </span>
+          <div class="tweet-embed">
+            <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-lang="en">
+              <p lang="en" dir="ltr">We&#39;re a dog-friendly company as well, Daniel! Check out our office dog, Brodie. 😻</p>
+              &mdash; Robinhood Help (@AskRobinhood)
+              <a href="https://x.com/AskRobinhood/status/761251888335642624">August 4, 2016</a>
+            </blockquote>
           </div>
         </div>
-
-        <button
-          class="ca-copy"
-          type="button"
-          data-ca="0xd36c6041f5a9394d5a75039b6653ced52c88b851"
-        >
-          <span>Contract</span>
-          <code>0xd36c6041f5a9394d5a75039b6653ced52c88b851</code>
-          <strong>Copy</strong>
-        </button>
-      </section>
-
-      <section class="ticker" aria-label="$BRODIE ticker">
-        <div>
-          <span>BRODIE MODE</span>
-          <span>DOG-FRIENDLY ALPHA</span>
-          <span>BRODIE IS LIVE</span>
-          <span>TO THE MOON</span>
-          <span>MEME ENERGY ONLY</span>
-          <span>BRODIE MODE</span>
-          <span>DOG-FRIENDLY ALPHA</span>
-          <span>BRODIE IS LIVE</span>
+        <div class="floating-paws">
+          <span class="paw">🐾</span>
+          <span class="paw">🐾</span>
+          <span class="paw">🐾</span>
         </div>
-      </section>
-
-      <section class="stats" aria-label="$BRODIE quick stats">
-        <article>
-          <span>Chain</span>
-          <strong>Ethereum</strong>
-        </article>
-        <article>
-          <span>Tax</span>
-          <strong>0%</strong>
-        </article>
-        <article>
-          <span>Ticker</span>
-          <strong>$BRODIE</strong>
-        </article>
-        <article>
-          <span>Mode</span>
-          <strong>Activated</strong>
-        </article>
-      </section>
-
-      <section id="mission" class="section mission-section">
-        <div class="section-copy">
-          <p class="eyebrow"><span></span> About</p>
-          <h2>Built like a launch poster, not a template.</h2>
-          <p>
-            The site keeps the meme simple: one token, one dog, one loud meme
-            direction. Every click points holders toward Uniswap and socials.
-          </p>
+      </div>
+      <div class="hero-text reveal-right">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Live on Robinhood Chain
         </div>
-        <div>
-          <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">We&#39;re a dog-friendly company as well, Daniel! Check out our office dog, Brodie. 😻 <a href="https://t.co/5aUmPV7KQT">pic.twitter.com/5aUmPV7KQT</a></p>&mdash; Robinhood Help (@AskRobinhood) <a href="https://x.com/AskRobinhood/status/761251888335642624?ref_src=twsrc%5Etfw">August 4, 2016</a></blockquote>
-          <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+        <h1 class="hero-name">Brodie</h1>
+        <p class="hero-subtitle">Robinhood Dog</p>
+        <p class="hero-bio">Robinhood's legendary office dog. Now on-chain as <strong>$BRODIE</strong> 🐶</p>
+        <div class="hero-actions">
+          <a href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=0xa0342f769222004067dfae7e9f7e7fd68b765dd9" target="_blank" rel="noopener" class="btn btn-primary">
+            <img src="icons/uniswap.svg" alt="" class="btn-icon btn-icon-on-primary">
+            Buy $BRODIE
+          </a>
+          <a href="#about" class="btn btn-ghost">Meet Brodie</a>
         </div>
-      </section>
-
-      <section class="banner-strip" aria-label="$BRODIE promotional banner">
-        <img
-          src="./assets/banners/eagle_dex_banner_1500x500.webp"
-          alt="$BRODIE promotional banner"
-        />
-      </section>
-
-      <section id="chart" class="section chart-section">
-        <div class="chart-copy">
-          <p class="eyebrow"><span></span> Market monitor</p>
-          <h2>Brodie community links.</h2>
-          <p>
-            Join the official community and use Uniswap for the buy flow.
-          </p>
-          <div class="mini-actions">
-            <a
-              href="https://x.com/RobinDogBrodie"
-              target="_blank"
-              rel="noopener noreferrer"
-              >X (Twitter)</a
-            >
-            <a
-              href="https://t.me/RobinDogBrodie"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Telegram</a
-            >
-          </div>
+        <div class="contract-box" id="contractBox">
+          <span class="contract-label">Contract</span>
+          <code class="contract-addr" id="contractAddr">0xa0342f769222004067dfae7e9f7e7fd68b765dd9</code>
+          <button class="copy-btn" id="copyBtn" aria-label="Copy contract">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          </button>
         </div>
-        <div
-          class="chart-card dex-card"
-          aria-label="$BRODIE live Dexscreener chart"
-        >
-          <div class="terminal-top">
-            <span></span><span></span><span></span>
-            <strong>LIVE $BRODIE</strong>
-          </div>
-          <iframe
-            title="$BRODIE live Dexscreener chart"
-            src="https://dexscreener.com/robinhood/0x2860d3dcdc5844493081ead41754c10ae87a4aa0?embed=1&theme=dark&trades=0&info=0"
-            loading="eager"
-            allow="clipboard-write"
-          ></iframe>
-        </div>
-      </section>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-      <section id="buy" class="section buy-section">
-        <div class="buy-card">
-          <img
-            src="./assets/backgrounds/eagle_character_card_800x1000.webp"
-            alt="$BRODIE character art"
-          />
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Our Story</span>
+        <h2 class="section-title">The Good Boy<br><span class="accent">Returns</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card reveal-up" style="--delay: 0.1s">
+          <div class="about-icon">🏢</div>
+          <h3>2016 Office Legend</h3>
+          <p>Brodie was Robinhood's official office dog — the good boy who stole every engineer's heart.</p>
+        </div>
+        <div class="about-card reveal-up" style="--delay: 0.2s">
+          <div class="about-icon">🐱</div>
+          <h3>No Cats Allowed</h3>
+          <p>When Robinhood posted about hiring cat-loving engineers, they proudly replied with their office dog Brodie — <a href="https://x.com/AskRobinhood/status/761251888335642624" target="_blank" rel="noopener" class="inline-link">see the original tweet</a>.</p>
+        </div>
+        <div class="about-card reveal-up" style="--delay: 0.3s">
+          <div class="about-icon">⛓️</div>
+          <h3>On-Chain in 2026</h3>
+          <p>With Robinhood Chain now live, the crypto community brought the original Robinhood dog back as $BRODIE — pure good boy energy.</p>
+        </div>
+      </div>
+      <div class="about-story reveal-up">
+        <p>Brodie was Robinhood's official office dog back in 2016. When the company posted about hiring cat-loving engineers, they proudly replied with a photo of their good boy and the iconic line: <em>"No real-life cats here, but check out our office dog, Brodie!"</em></p>
+        <p>With Robinhood Chain now live in 2026, the crypto community has brought the original Robinhood dog back as <strong>$BRODIE</strong> — a wholesome memecoin tribute to early Robinhood culture and pure good boy energy. No cats allowed. 🐾</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO BUY -->
+  <section class="section howtobuy" id="howtobuy">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Get $BRODIE</span>
+        <h2 class="section-title">How to <span class="accent">Buy</span></h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card reveal-up" style="--delay: 0.05s">
+          <div class="step-num">01</div>
+          <h3>Get a Wallet</h3>
+          <p>Download MetaMask or Rabby and add Robinhood Chain (Chain ID: 4663).</p>
+        </div>
+        <div class="step-card reveal-up" style="--delay: 0.15s">
+          <div class="step-num">02</div>
+          <h3>Bridge ETH</h3>
+          <p>Bridge ETH to Robinhood Chain via the official Arbitrum bridge or supported routes.</p>
+        </div>
+        <div class="step-card reveal-up" style="--delay: 0.25s">
+          <div class="step-num">03</div>
+          <h3>Swap on Uniswap</h3>
+          <p>Head to Uniswap on Robinhood Chain and swap ETH for $BRODIE.</p>
+        </div>
+        <div class="step-card reveal-up" style="--delay: 0.35s">
+          <div class="step-num">04</div>
+          <h3>Join the Pack</h3>
+          <p>Follow us on X and welcome to the good boy club. No cats. 🐾</p>
+        </div>
+      </div>
+      <div class="buy-links reveal-up">
+        <a href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=0xa0342f769222004067dfae7e9f7e7fd68b765dd9" target="_blank" rel="noopener" class="buy-link-card buy-link-primary">
+          <img src="icons/uniswap.svg" alt="Uniswap" class="buy-link-icon">
           <div>
-            <p class="eyebrow"><span></span> How to enter</p>
-            <h2>Open Uniswap and grab $BRODIE.</h2>
-            <ol>
-              <li>Open Uniswap on Ethereum Mainnet.</li>
-              <li>Select ETH as your input token.</li>
-              <li>Make your own move. No promises, no financial advice.</li>
-            </ol>
-            <a
-              class="btn primary"
-                href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=0xa0342f769222004067dfae7e9f7e7fd68b765dd9"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>$</span>
-              Buy $BRODIE
+            <strong>Buy on Uniswap</strong>
+            <span>Swap ETH for $BRODIE on Robinhood Chain</span>
+          </div>
+        </a>
+        <a href="https://robinhoodchain.blockscout.com/token/0xa0342f769222004067dfae7e9f7e7fd68b765dd9" target="_blank" rel="noopener" class="buy-link-card">
+          <img src="icons/blockscout.svg" alt="Blockscout" class="buy-link-icon">
+          <div>
+            <strong>Blockscout</strong>
+            <span>View contract on explorer</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHART -->
+  <section class="section chart-section" id="chart">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Live Price</span>
+        <h2 class="section-title">$BRODIE <span class="accent">Chart</span></h2>
+      </div>
+      <div class="chart-wrap reveal-up">
+        <div class="chart-glow"></div>
+        <iframe
+          src="https://dexscreener.com/robinhood/0xee68c2a28834d653f6f5e64473893fb8f5a82ac2?embed=1&theme=dark&trades=0&info=0"
+          title="BRODIE DexScreener Chart"
+          allow="clipboard-write"
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="chart-cta reveal-up">
+        <a href="https://dexscreener.com/robinhood/0xee68c2a28834d653f6f5e64473893fb8f5a82ac2" target="_blank" rel="noopener" class="btn btn-primary">
+          <img src="icons/dexscreener.svg" alt="" class="btn-icon btn-icon-on-primary">
+          Open on DexScreener
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN US -->
+  <section class="section joinus" id="joinus">
+    <div class="container">
+      <div class="joinus-grid">
+        <div class="joinus-banner reveal-left">
+          <div class="banner-glow"></div>
+          <img src="assets/banner.png" alt="Brodie - Robinhood Dog" class="banner-img">
+        </div>
+        <div class="joinus-content reveal-right">
+          <span class="section-tag">Community</span>
+          <h2 class="section-title">Join the <span class="accent">Pack</span></h2>
+          <p class="joinus-desc">Be part of the good boy revolution. Follow $BRODIE, share the lore, and remember — no cats allowed.</p>
+          <div class="social-grid">
+            <a href="https://x.com/BrodieRobinDog" target="_blank" rel="noopener" class="social-card">
+              <img src="icons/x.svg" alt="X" class="social-icon">
+              <div>
+                <strong>X / Twitter</strong>
+                <span>@BrodieRobinDog</span>
+              </div>
+            </a>
+            <a href="https://dexscreener.com/robinhood/0xee68c2a28834d653f6f5e64473893fb8f5a82ac2" target="_blank" rel="noopener" class="social-card">
+              <img src="icons/dexscreener.svg" alt="DexScreener" class="social-icon">
+              <div>
+                <strong>DexScreener</strong>
+                <span>Track $BRODIE</span>
+              </div>
+            </a>
+            <a href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=0xa0342f769222004067dfae7e9f7e7fd68b765dd9" target="_blank" rel="noopener" class="social-card">
+              <img src="icons/uniswap.svg" alt="Uniswap" class="social-icon">
+              <div>
+                <strong>Uniswap</strong>
+                <span>Buy $BRODIE</span>
+              </div>
             </a>
           </div>
+          <a href="https://x.com/BrodieRobinDog" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            <img src="icons/x.svg" alt="" class="btn-icon btn-icon-on-primary">
+            Follow @BrodieRobinDog
+          </a>
         </div>
-      </section>
-
-      <section id="raids" class="section raids-section">
-        <div class="section-copy">
-          <p class="eyebrow"><span></span> Raid kit</p>
-          <h2>Copy-ready lines for Brodie timelines.</h2>
-        </div>
-        <div class="meme-grid">
-          <button
-            type="button"
-            data-copy-line="Brodie mode activated. $BRODIE is live."
-          >
-            Brodie mode activated
-          </button>
-          <button type="button" data-copy-line="Robinhood's dog goes on-chain. $BRODIE">
-            Robinhood dog on-chain
-          </button>
-          <button
-            type="button"
-            data-copy-line="Brodie has landed on Ethereum. $BRODIE"
-          >
-            Brodie landed
-          </button>
-          <button
-            type="button"
-            data-copy-line="No sideways zone. Send Brodie. $BRODIE"
-          >
-            No sideways zone
-          </button>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div>
-        <img src="./assets/logos/eagle_coin_logo_128.webp" alt="" />
-        <strong>$BRODIE</strong>
       </div>
-      <p>
-        Memecoin page for Robinhood's dog. No financial advice, no promises,
-        no guarantees. Crypto is volatile. DYOR.
-      </p>
-      <p>
-        <a href="https://x.com/RobinDogBrodie" target="_blank" rel="noopener noreferrer">X</a>
-        |
-        <a href="https://t.me/RobinDogBrodie" target="_blank" rel="noopener noreferrer">Telegram</a>
-      </p>
-    </footer>
+    </div>
+  </section>
 
-    <script src="./script.js"></script>
-  </body>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Brodie" class="footer-logo">
+        <span>Robinhood Dog · $BRODIE</span>
+      </div>
+      <p class="footer-disclaimer">$BRODIE is a memecoin with no intrinsic value. This is not financial advice. Good boy energy only. 🐾</p>
+      <p class="footer-copy">&copy; 2026 Robinhood Dog. No cats allowed.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">Contract copied!</div>
+
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>
